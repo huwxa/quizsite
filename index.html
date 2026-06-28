@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple SD Gothic Neo'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Apple SD Gothic Neo'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ko"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;통합사회 단계별 완벽 정복 시스템&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>:root {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--primary: #4f46e5;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--primary-light: #e0e7ff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--success: #16a34a;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--danger: #dc2626;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gray-100: #f3f4f6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gray-200: #e5e7eb;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--gray-700: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>--text-main: #1f2937;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Pretendard', -apple-system, system-ui, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #f8fafc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--text-main);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 850px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 20px rgba(0,0,0,0.05);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 2px solid var(--gray-100);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-bottom: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 0 8px 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.level-tabs {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: grid;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>grid-template-columns: repeat(3, 1fr);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (min-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.level-tabs { grid-template-columns: repeat(6, 1fr); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 5px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid var(--gray-200);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--gray-100);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--gray-700);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.tab-btn.active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quiz-section { display: none; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.quiz-section.active { display: block; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.score-board {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--primary-light);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #e2e8f0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.q-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #0f172a;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.input-group {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type="text"]:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.btn-check {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: var(--gray-700);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback.correct {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #dcfce7;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--success);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid var(--success);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.feedback.wrong {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #fee2e2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--danger);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 4px solid var(--danger);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.analysis-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-top: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-top: 1px dashed #cbd5e1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #475569;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>.supplement-badge {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f1f5f9;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: var(--primary);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 2px 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 11px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: bold;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;🎯 통합사회 레벨별 파괴 시스템 (총 90문항)&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p&gt;기초부터 심화까지 완벽 단계별 학습 &amp; 취약점 처방 오답노트&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="level-tabs"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn active" onclick="switchTab('lvl1')"&gt;1. 기초&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" onclick="switchTab('lvl2')"&gt;2. 하&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" onclick="switchTab('lvl3')"&gt;3. 중&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" onclick="switchTab('lvl4')"&gt;4. 상&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" onclick="switchTab('lvl5')"&gt;5. 최상&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="tab-btn" onclick="switchTab('lvl6')"&gt;6. 심화&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl1" class="quiz-section active"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl1"&gt;1단계: 핵심 용어 뼈대 잡기 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl1"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl2" class="quiz-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl2"&gt;2단계: 교과서 기본 다지기 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl2"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl3" class="quiz-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl3"&gt;3단계: 핵심 개념 응용하기 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl3"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl4" class="quiz-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl4"&gt;4단계: 자료 및 변동 양상 추론 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl4"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl5" class="quiz-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl5"&gt;5단계: 고난도 함정 및 복합 선지 분석 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl5"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="lvl6" class="quiz-section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="score-board" id="score-lvl6"&gt;6단계: 서술형 대비 및 최고존엄 킬러 개념 (0/15)&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="container-lvl6"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// 90문항 대규모 데이터베이스 구축</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const quizData = {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lvl1: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "오랜 기간 비가 내리지 않아 물이 부족해지는 진행이 느린 기후 재해는?", a: ["가뭄"], t: "자연재해", h: "ㄱㅁ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "열대저기압으로 최대풍속이 17m/s 이상이며 폭염 해결에 도움을 주는 재해는?", a: ["태풍"], t: "자연재해", h: "ㅌㅍ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "인간과 자연을 분리하여 바라보고 자연의 도구적 가치를 강조하는 세계관은?", a: ["인간중심주의"], t: "인간과 자연의 관계", h: "ㅇㄱㅈㅅㅈㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도덕적 고려 대상을 인간, 동물, 식물뿐만 아니라 대지 전체로 넓힌 사상가는?", a: ["레오폴드"], t: "인간과 자연의 관계", h: "ㄹㅇㅍㄷ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "우주의 모든 존재가 원인과 조건에 의해 상호 의존한다는 불교의 핵심 교리는?", a: ["연기설", "연기사상"], t: "동양의 전통 자연관", h: "ㅇㄱㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "오존층 파괴를 유발하는 프레온가스(CFCs)의 생산 및 사용을 규제한 1987년 협약은?", a: ["몬트리올의정서", "몬트리올 의정서"], t: "주요 국제 협약", h: "ㅁㅌㄹㅇㅇㅈㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "물새 서식지로서 국제적으로 중요한 가치를 지니는 습지를 보호하기 위한 협약은?", a: ["람사르협약", "람사르 협약"], t: "주요 국제 협약", h: "ㄹㅅㄹㅎㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "이전에 없던 문화 요소를 새롭게 만들어 내는 내재적 문화 변동 요인은?", a: ["발명"], t: "문화 변동 요인", h: "ㅂㅁ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "이미 존재하고 있었으나 세상에 알려지지 않은 것을 찾아내는 내재적 요인은?", a: ["발견"], t: "문화 변동 요인", h: "ㅂㄱ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "전쟁이나 교역 등 인적 접촉을 통해 타국의 문화가 직접 전달되는 전파 방식은?", a: ["직접전파", "직접 전파"], t: "문화 변동 요인", h: "ㅈㅈㅈㅍ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "인터넷이나 드라마, 인쇄물 등의 매개체를 통해 문화가 전달되는 전파 방식은?", a: ["간접전파", "간접 전파"], t: "문화 변동 요인", h: "ㄱㅈㅈㅍ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "타문화의 아이디어를 얻어 새로운 문화 요소를 창조하는 변동 요인은?", a: ["자극전파", "자극 전파"], t: "문화 변동 요인", h: "ㅈㄱㅈㅍ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "자신의 문화만을 우월하게 여기고 타문화를 부정적으로 평가하는 문화 이해 태도는?", a: ["자문화중심주의", "자문화 중심주의"], t: "문화를 이해하는 태도", h: "ㅈㅁㅎㅈㅅㅈㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "특정 지역이나 시설로 도달하기 편리한 정도를 뜻하는 용어로 도심이 가장 높은 것은?", a: ["접근성"], t: "도시 내부 구조", h: "ㅈㄱㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "토지 이용자가 토지 소유자에게 지불하는 토지 이용 대가(임대료)를 뜻하는 말은?", a: ["지대"], t: "도시 내부 구조", h: "ㅈㄷ" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lvl2: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "빙하기 U자곡에 후빙기 해수면 상승 및 지반 침강으로 형성된 좁고 깊은 해안 지형은?", a: ["피오르", "피오르해안"], t: "지형과 인간 생활", h: "ㅍㅇㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "석회암이 빗물이나 지하수의 용식 작용을 받아 형성되는 지형을 일컫는 학술 용어는?", a: ["카르스트", "카르스트지형"], t: "지형과 인간 생활", h: "ㅋㄹㅅㅌ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "자연을 정복하여 인류의 물질적 복지를 증진시켜야 한다고 본 '아는 것이 힘이다'의 사상가는?", a: ["베이컨"], t: "인간과 자연의 관계", h: "ㅂㅇㅋ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "인간은 정신을 지닌 우월한 존재이며 자연은 기계에 불과하다고 본 프랑스의 이분법적 철학자는?", a: ["데카르트"], t: "인간과 자연의 관계", h: "ㄷㅋㄹㅌ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "자연의 섭리에 순응하며 인위적인 것을 배격하는 동양 철학의 사상은?", a: ["도가", "무위자연"], t: "동양의 전통 자연관", h: "ㄷㄱ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "2015년에 채택되어 선진국과 개도국 모두에게 온실가스 감축 의무를 부과한 기후 협정은?", a: ["파리협정", "파리 협정"], t: "주요 국제 협약", h: "ㅍㄹㅎㅈ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "서로 다른 두 문화가 장기간 접촉하여 고유 정체성을 유지하며 나란히 존재하는 결과(A+B=A&amp;B)는?", a: ["문화병존", "문화 병존", "문화공존", "문화 공존"], t: "문화 접변의 결과", h: "ㅁㅎㅂㅈ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "서로 다른 두 문화 요소가 결합하여 기존과 다른 제3의 새로운 문화를 만드는 결과(A+B=C)는?", a: ["문화융합", "문화 융합"], t: "문화 접변의 결과", h: "ㅁㅎㅇㅎ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "하굿둑이나 수중보 같은 인공 구조물 설치로 인해 해안선이 뒤로 밀려나는 현상은?", a: ["해안침식", "해안 침식"], t: "자연재해 및 인위적 변화", h: "ㅎㅇㅊㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "타문화를 맹목적으로 동경하여 자문화를 열등하게 여기는 주체성 없는 문화 이해 태도는?", a: ["문화사대주의", "문화 사대주의"], t: "문화를 이해하는 태도", h: "ㅁㅎㅅㄷㅈㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "다양한 문화가 공존하되 주류 문화가 중심(주체)이 되고 위계를 두는 정책 비유 이론은?", a: ["국수대접이론", "국수대접 이론"], t: "다문화 정책 비교", h: "ㄱㅅㄷㅈㅇㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도시화로 인해 빗물이 땅속으로 스며들지 못하게 막는 아스팔트 등의 바닥 면적을 뜻하는 말은?", a: ["불투수면적", "불투수 면적", "불투수층"], t: "산업화 도시화에 따른 변화", h: "ㅂㅌㅅㅁㅈ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도심의 지가 상승으로 주거지가 외곽으로 이동하면서 도심의 밤 인구가 텅 비는 현상은?", a: ["인구공동화", "인구 공동화", "인구공동화현상"], t: "도시 내부 구조", h: "ㅇㄱㄱㄷㅎ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "교통수단 발달로 인해 대도시가 주변 중소도시의 상권과 인구를 빨아들이는 현상은?", a: ["빨대효과", "빨대 효과"], t: "교통 통신 발달에 따른 변화", h: "ㅃㄷㅎㄱ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "현장에 직접 가지 않고 문헌, 지도, 통계, 인터넷 등을 활용하여 정보를 얻는 지역 조사 단계는?", a: ["실내조사", "실내 조사"], t: "지역 조사 방법", h: "ㅅㄴㅈㅅ" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lvl3: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "칸트는 인간성 실현을 위해 자연을 '함부로' 대하면 안 된다고 보았으나, 동물을 도덕적 고려 대상에 포함시켰는가? (O/X)", a: ["X"], t: "인간과 자연의 관계", h: "인간에 대한 의무일 뿐 동물 자체에 대한 도덕적 의무는 없다고 봄" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "문화 접변의 결과 중 기존 문화 체계가 다른 문화에 완전히 흡수되어 소멸하는 현상(A+B=B)은?", a: ["문화동화", "문화 동화"], t: "문화 접변의 결과", h: "ㅁㅎㄷㅎ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "다문화 사회 정책 중 소수 문화를 인정하지 않고 주류 문화에 완전히 동화시키려는 이론은?", a: ["용광로이론", "용광로 이론"], t: "다문화 정책 비교", h: "ㅇㄱㄹㅇㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "다문화 사회 정책 중 주류·비주류 구분 없이 모든 문화의 대등한 공존을 추구하는 이론은?", a: ["샐러드볼이론", "샐러드볼 이론"], t: "다문화 정책 비교", h: "ㅅㄹㄷㅂㅇㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "인공열 발생, 아스팔트, 빌딩 숲으로 인해 도시 중심 기온이 주변부보다 높게 나타나는 현상은?", a: ["도시열섬현상", "도시 열섬 현상", "도시열섬", "도시 열섬"], t: "산업화 도시화에 따른 변화", h: "ㄷㅅㅇㅅㅎㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "지하수 과다 추출이나 상하수관 누수로 인해 도심 지면에 거대한 구멍이 뚫리는 현상은?", a: ["땅꺼짐", "싱크홀"], t: "자연재해 및 인위적 변화", h: "ㅅㅋㅎ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "문화적 다양성을 존중하지만 인류의 보편 윤리를 훼손하는 문화까지 허용해 버리는 한계는?", a: ["극단적문화상대주의", "극단적 문화 상대주의", "극단적 상대주의"], t: "문화 상대주의와 보편 윤리", h: "ㄱㄷㅈㅅㄷㅈㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도심의 지나친 과밀화를 분담하기 위해 교통 요지에 발달하며 상업·업무 기능이 집중되는 곳은?", a: ["부도심"], t: "도시 내부 구조", h: "ㅂㄷㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도시 내부 구조 중 상점, 공장, 주택이 무질서하게 혼재되어 있으며 재개발이 빈번한 지역은?", a: ["중간지역", "중간 지역"], t: "도시 내부 구조", h: "ㅈㄱㅈㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도시 조사 단계 중 면담, 설문조사, 현장 관찰, 실측 등을 수행하는 단계를 무엇이라 하는가?", a: ["야외조사", "야외 조사", "현지조사", "현지 조사"], t: "지역 조사 방법", h: "ㅇㅇㅈㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "생태 중심주의의 한계로, 생태계 전체의 이익을 위해 인간 개인의 희생을 정당화하려는 성향은?", a: ["환경파시즘", "환경 파시즘"], t: "인간과 자연의 관계", h: "ㅎㄱㅍㅅㅈ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "네스의 심층 생태주의에서 주장하는 두 가지 핵심 규범은 '생명 중심적 평등'과 '큰 ( &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; )'이다. 빈칸은?", a: ["자아실현"], t: "인간과 자연의 관계", h: "ㅈㅇㅅㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "1997년에 채택되어 선진국에 법적 구속력이 있는 온실가스 감축 목표를 규정한 의정서는?", a: ["교토의정서", "교토 의정서"], t: "주요 국제 협약", h: "ㄱㅌㅇㅈㅅ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "지역과 계층 간에 정보 통신 기술에 대한 접근과 활용 차이로 인해 발생하는 불평등 현상은?", a: ["정보격차", "정보 격차"], t: "교통 통신 발달에 따른 변화", h: "ㅈㅂㄱㅊ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "문화전파의 결과물 중 서로 다른 문화가 만나 완전히 새로운 제3의 문화 양식(예: 재즈)이 되는 현상은?", a: ["문화혼종", "문화 혼종"], t: "교통 통신 발달에 따른 변화", h: "ㅁㅎㅎㅈ" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">        </span>lvl4: [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "도시의 주간인구지수 공식은 (주간인구 ÷ [ &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ]) × 100 이다. 빈칸에 들어갈 인구 유형은?", a: ["상주인구"], t: "도시 내부 구조", h: "ㅅㅈㅇㄱ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "전형적인 대도시 도심 지역의 주간인구지수는 보통 100보다 큰가, 작은가?", a: ["크다", "큰가"], t: "도시 내부 구조", h: "주간에 유입되는 인구가 많으므로 100 이상임" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "체로키족 문자는 백인의 인쇄 문자를 보고 아이디어를 얻어 독창적으로 발명되었다. 무슨 전파인가?", a: ["자극전파", "자극 전파"], t: "문화 변동 요인", h: "아이디어를 얻은 전파 양식" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "외국인 근로자, 유학생, 다문화 가족 증가로 인해 혐오증을 뜻하는 ( &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; ) 현상이 나타나기도 한다. 빈칸은?", a: ["제노포비아"], t: "다문화 사회와 다양성", h: "ㅈㄴㅍㅂㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "인간과 자연의 조화를 추구하며 만물의 본래적 가치를 인정하는 유교의 핵심 가치관 용어는?", a: ["천인합일"], t: "동양의 전통 자연관", h: "ㅊㅇㅎㅇ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "서구 근대의 이분법적 자연관은 자연을 생명력이 없는 물질로 보는 ( &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; )적 자연관을 확립했다. 빈칸은?", a: ["기계론", "기계론적"], t: "인간과 자연의 관계", h: "ㄱㄱㄹ" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ q: "강화도 성공회 성당은 외관은 전통 한옥 양식이지만 내부 배치는 서양 바실리카 양식이다. 어떤 접변 결과인가?", a:</p>
+</body>
+</html>
