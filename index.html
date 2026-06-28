@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합사회 단계별 완벽 정복 시스템</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --success: #16a34a;
+            --danger: #dc2626;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-700: #374151;
+            --text-main: #1f2937;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
+            background-color: #f8fafc;
+            color: var(--text-main);
+            margin: 0;
+            padding: 15px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--gray-100);
+            padding-bottom: 15px;
+        }
+
+        header h1 {
+            color: var(--primary);
+            margin: 0 0 8px 0;
+            font-size: 26px;
+        }
+
+        .level-tabs {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        @media (min-width: 600px) {
+            .level-tabs { grid-template-columns: repeat(6, 1fr); }
+        }
+
+        .tab-btn {
+            padding: 10px 5px;
+            border: 1px solid var(--gray-200);
+            background: var(--gray-100);
+            color: var(--gray-700);
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .quiz-section { display: none; }
+        .quiz-section.active { display: block; }
+
+        .score-board {
+            background: var(--primary-light);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-size: 15px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+
+        .q-title {
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-check {
+            padding: 10px 16px;
+            background: var(--gray-700);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            padding: 12px;
+            border-radius: 6px;
+            display: none;
+            font-size: 13px;
+        }
+
+        .feedback.correct {
+            display: block;
+            background-color: #dcfce7;
+            color: var(--success);
+            border-left: 4px solid var(--success);
+        }
+
+        .feedback.wrong {
+            display: block;
+            background-color: #fee2e2;
+            color: var(--danger);
+            border-left: 4px solid var(--danger);
+        }
+
+        .analysis-box {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px dashed #cbd5e1;
+            color: #475569;
+        }
+
+        .supplement-badge {
+            display: inline-block;
+            background: #f1f5f9;
+            color: var(--primary);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🎯 통합사회 레벨별 파괴 시스템 (총 90문항)</h1>
+        <p>기초부터 심화까지 완벽 단계별 학습 & 취약점 처방 오답노트</p>
+    </header>
+
+    <div class="level-tabs">
+        <button class="tab-btn active" onclick="switchTab('lvl1')">1. 기초</button>
+        <button class="tab-btn" onclick="switchTab('lvl2')">2. 하</button>
+        <button class="tab-btn" onclick="switchTab('lvl3')">3. 중</button>
+        <button class="tab-btn" onclick="switchTab('lvl4')">4. 상</button>
+        <button class="tab-btn" onclick="switchTab('lvl5')">5. 최상</button>
+        <button class="tab-btn" onclick="switchTab('lvl6')">6. 심화</button>
+    </div>
+
+    <div id="lvl1" class="quiz-section active">
+        <div class="score-board" id="score-lvl1">1단계: 핵심 용어 뼈대 잡기 (0/15)</div>
+        <div id="container-lvl1"></div>
+    </div>
+
+    <div id="lvl2" class="quiz-section">
+        <div class="score-board" id="score-lvl2">2단계: 교과서 기본 다지기 (0/15)</div>
+        <div id="container-lvl2"></div>
+    </div>
+
+    <div id="lvl3" class="quiz-section">
+        <div class="score-board" id="score-lvl3">3단계: 핵심 개념 응용하기 (0/15)</div>
+        <div id="container-lvl3"></div>
+    </div>
+
+    <div id="lvl4" class="quiz-section">
+        <div class="score-board" id="score-lvl4">4단계: 자료 및 변동 양상 추론 (0/15)</div>
+        <div id="container-lvl4"></div>
+    </div>
+
+    <div id="lvl5" class="quiz-section">
+        <div class="score-board" id="score-lvl5">5단계: 고난도 함정 및 복합 선지 분석 (0/15)</div>
+        <div id="container-lvl5"></div>
+    </div>
+
+    <div id="lvl6" class="quiz-section">
+        <div class="score-board" id="score-lvl6">6단계: 서술형 대비 및 최고존엄 킬러 개념 (0/15)</div>
+        <div id="container-lvl6"></div>
+    </div>
+</div>
+
+<script>
+    // 90문항 대규모 데이터베이스 구축
+    const quizData = {
+        lvl1: [
+            { q: "오랜 기간 비가 내리지 않아 물이 부족해지는 진행이 느린 기후 재해는?", a: ["가뭄"], t: "자연재해", h: "ㄱㅁ" },
+            { q: "열대저기압으로 최대풍속이 17m/s 이상이며 폭염 해결에 도움을 주는 재해는?", a: ["태풍"], t: "자연재해", h: "ㅌㅍ" },
+            { q: "인간과 자연을 분리하여 바라보고 자연의 도구적 가치를 강조하는 세계관은?", a: ["인간중심주의"], t: "인간과 자연의 관계", h: "ㅇㄱㅈㅅㅈㅇ" },
+            { q: "도덕적 고려 대상을 인간, 동물, 식물뿐만 아니라 대지 전체로 넓힌 사상가는?", a: ["레오폴드"], t: "인간과 자연의 관계", h: "ㄹㅇㅍㄷ" },
+            { q: "우주의 모든 존재가 원인과 조건에 의해 상호 의존한다는 불교의 핵심 교리는?", a: ["연기설", "연기사상"], t: "동양의 전통 자연관", h: "ㅇㄱㅅ" },
+            { q: "오존층 파괴를 유발하는 프레온가스(CFCs)의 생산 및 사용을 규제한 1987년 협약은?", a: ["몬트리올의정서", "몬트리올 의정서"], t: "주요 국제 협약", h: "ㅁㅌㄹㅇㅇㅈㅅ" },
+            { q: "물새 서식지로서 국제적으로 중요한 가치를 지니는 습지를 보호하기 위한 협약은?", a: ["람사르협약", "람사르 협약"], t: "주요 국제 협약", h: "ㄹㅅㄹㅎㅇ" },
+            { q: "이전에 없던 문화 요소를 새롭게 만들어 내는 내재적 문화 변동 요인은?", a: ["발명"], t: "문화 변동 요인", h: "ㅂㅁ" },
+            { q: "이미 존재하고 있었으나 세상에 알려지지 않은 것을 찾아내는 내재적 요인은?", a: ["발견"], t: "문화 변동 요인", h: "ㅂㄱ" },
+            { q: "전쟁이나 교역 등 인적 접촉을 통해 타국의 문화가 직접 전달되는 전파 방식은?", a: ["직접전파", "직접 전파"], t: "문화 변동 요인", h: "ㅈㅈㅈㅍ" },
+            { q: "인터넷이나 드라마, 인쇄물 등의 매개체를 통해 문화가 전달되는 전파 방식은?", a: ["간접전파", "간접 전파"], t: "문화 변동 요인", h: "ㄱㅈㅈㅍ" },
+            { q: "타문화의 아이디어를 얻어 새로운 문화 요소를 창조하는 변동 요인은?", a: ["자극전파", "자극 전파"], t: "문화 변동 요인", h: "ㅈㄱㅈㅍ" },
+            { q: "자신의 문화만을 우월하게 여기고 타문화를 부정적으로 평가하는 문화 이해 태도는?", a: ["자문화중심주의", "자문화 중심주의"], t: "문화를 이해하는 태도", h: "ㅈㅁㅎㅈㅅㅈㅇ" },
+            { q: "특정 지역이나 시설로 도달하기 편리한 정도를 뜻하는 용어로 도심이 가장 높은 것은?", a: ["접근성"], t: "도시 내부 구조", h: "ㅈㄱㅅ" },
+            { q: "토지 이용자가 토지 소유자에게 지불하는 토지 이용 대가(임대료)를 뜻하는 말은?", a: ["지대"], t: "도시 내부 구조", h: "ㅈㄷ" }
+        ],
+        lvl2: [
+            { q: "빙하기 U자곡에 후빙기 해수면 상승 및 지반 침강으로 형성된 좁고 깊은 해안 지형은?", a: ["피오르", "피오르해안"], t: "지형과 인간 생활", h: "ㅍㅇㄹ" },
+            { q: "석회암이 빗물이나 지하수의 용식 작용을 받아 형성되는 지형을 일컫는 학술 용어는?", a: ["카르스트", "카르스트지형"], t: "지형과 인간 생활", h: "ㅋㄹㅅㅌ" },
+            { q: "자연을 정복하여 인류의 물질적 복지를 증진시켜야 한다고 본 '아는 것이 힘이다'의 사상가는?", a: ["베이컨"], t: "인간과 자연의 관계", h: "ㅂㅇㅋ" },
+            { q: "인간은 정신을 지닌 우월한 존재이며 자연은 기계에 불과하다고 본 프랑스의 이분법적 철학자는?", a: ["데카르트"], t: "인간과 자연의 관계", h: "ㄷㅋㄹㅌ" },
+            { q: "자연의 섭리에 순응하며 인위적인 것을 배격하는 동양 철학의 사상은?", a: ["도가", "무위자연"], t: "동양의 전통 자연관", h: "ㄷㄱ" },
+            { q: "2015년에 채택되어 선진국과 개도국 모두에게 온실가스 감축 의무를 부과한 기후 협정은?", a: ["파리협정", "파리 협정"], t: "주요 국제 협약", h: "ㅍㄹㅎㅈ" },
+            { q: "서로 다른 두 문화가 장기간 접촉하여 고유 정체성을 유지하며 나란히 존재하는 결과(A+B=A&B)는?", a: ["문화병존", "문화 병존", "문화공존", "문화 공존"], t: "문화 접변의 결과", h: "ㅁㅎㅂㅈ" },
+            { q: "서로 다른 두 문화 요소가 결합하여 기존과 다른 제3의 새로운 문화를 만드는 결과(A+B=C)는?", a: ["문화융합", "문화 융합"], t: "문화 접변의 결과", h: "ㅁㅎㅇㅎ" },
+            { q: "하굿둑이나 수중보 같은 인공 구조물 설치로 인해 해안선이 뒤로 밀려나는 현상은?", a: ["해안침식", "해안 침식"], t: "자연재해 및 인위적 변화", h: "ㅎㅇㅊㅅ" },
+            { q: "타문화를 맹목적으로 동경하여 자문화를 열등하게 여기는 주체성 없는 문화 이해 태도는?", a: ["문화사대주의", "문화 사대주의"], t: "문화를 이해하는 태도", h: "ㅁㅎㅅㄷㅈㅇ" },
+            { q: "다양한 문화가 공존하되 주류 문화가 중심(주체)이 되고 위계를 두는 정책 비유 이론은?", a: ["국수대접이론", "국수대접 이론"], t: "다문화 정책 비교", h: "ㄱㅅㄷㅈㅇㄹ" },
+            { q: "도시화로 인해 빗물이 땅속으로 스며들지 못하게 막는 아스팔트 등의 바닥 면적을 뜻하는 말은?", a: ["불투수면적", "불투수 면적", "불투수층"], t: "산업화 도시화에 따른 변화", h: "ㅂㅌㅅㅁㅈ" },
+            { q: "도심의 지가 상승으로 주거지가 외곽으로 이동하면서 도심의 밤 인구가 텅 비는 현상은?", a: ["인구공동화", "인구 공동화", "인구공동화현상"], t: "도시 내부 구조", h: "ㅇㄱㄱㄷㅎ" },
+            { q: "교통수단 발달로 인해 대도시가 주변 중소도시의 상권과 인구를 빨아들이는 현상은?", a: ["빨대효과", "빨대 효과"], t: "교통 통신 발달에 따른 변화", h: "ㅃㄷㅎㄱ" },
+            { q: "현장에 직접 가지 않고 문헌, 지도, 통계, 인터넷 등을 활용하여 정보를 얻는 지역 조사 단계는?", a: ["실내조사", "실내 조사"], t: "지역 조사 방법", h: "ㅅㄴㅈㅅ" }
+        ],
+        lvl3: [
+            { q: "칸트는 인간성 실현을 위해 자연을 '함부로' 대하면 안 된다고 보았으나, 동물을 도덕적 고려 대상에 포함시켰는가? (O/X)", a: ["X"], t: "인간과 자연의 관계", h: "인간에 대한 의무일 뿐 동물 자체에 대한 도덕적 의무는 없다고 봄" },
+            { q: "문화 접변의 결과 중 기존 문화 체계가 다른 문화에 완전히 흡수되어 소멸하는 현상(A+B=B)은?", a: ["문화동화", "문화 동화"], t: "문화 접변의 결과", h: "ㅁㅎㄷㅎ" },
+            { q: "다문화 사회 정책 중 소수 문화를 인정하지 않고 주류 문화에 완전히 동화시키려는 이론은?", a: ["용광로이론", "용광로 이론"], t: "다문화 정책 비교", h: "ㅇㄱㄹㅇㄹ" },
+            { q: "다문화 사회 정책 중 주류·비주류 구분 없이 모든 문화의 대등한 공존을 추구하는 이론은?", a: ["샐러드볼이론", "샐러드볼 이론"], t: "다문화 정책 비교", h: "ㅅㄹㄷㅂㅇㄹ" },
+            { q: "인공열 발생, 아스팔트, 빌딩 숲으로 인해 도시 중심 기온이 주변부보다 높게 나타나는 현상은?", a: ["도시열섬현상", "도시 열섬 현상", "도시열섬", "도시 열섬"], t: "산업화 도시화에 따른 변화", h: "ㄷㅅㅇㅅㅎㅅ" },
+            { q: "지하수 과다 추출이나 상하수관 누수로 인해 도심 지면에 거대한 구멍이 뚫리는 현상은?", a: ["땅꺼짐", "싱크홀"], t: "자연재해 및 인위적 변화", h: "ㅅㅋㅎ" },
+            { q: "문화적 다양성을 존중하지만 인류의 보편 윤리를 훼손하는 문화까지 허용해 버리는 한계는?", a: ["극단적문화상대주의", "극단적 문화 상대주의", "극단적 상대주의"], t: "문화 상대주의와 보편 윤리", h: "ㄱㄷㅈㅅㄷㅈㅇ" },
+            { q: "도심의 지나친 과밀화를 분담하기 위해 교통 요지에 발달하며 상업·업무 기능이 집중되는 곳은?", a: ["부도심"], t: "도시 내부 구조", h: "ㅂㄷㅅ" },
+            { q: "도시 내부 구조 중 상점, 공장, 주택이 무질서하게 혼재되어 있으며 재개발이 빈번한 지역은?", a: ["중간지역", "중간 지역"], t: "도시 내부 구조", h: "ㅈㄱㅈㅇ" },
+            { q: "도시 조사 단계 중 면담, 설문조사, 현장 관찰, 실측 등을 수행하는 단계를 무엇이라 하는가?", a: ["야외조사", "야외 조사", "현지조사", "현지 조사"], t: "지역 조사 방법", h: "ㅇㅇㅈㅅ" },
+            { q: "생태 중심주의의 한계로, 생태계 전체의 이익을 위해 인간 개인의 희생을 정당화하려는 성향은?", a: ["환경파시즘", "환경 파시즘"], t: "인간과 자연의 관계", h: "ㅎㄱㅍㅅㅈ" },
+            { q: "네스의 심층 생태주의에서 주장하는 두 가지 핵심 규범은 '생명 중심적 평등'과 '큰 ( &nbsp;&nbsp;&nbsp;&nbsp; )'이다. 빈칸은?", a: ["자아실현"], t: "인간과 자연의 관계", h: "ㅈㅇㅅㄹ" },
+            { q: "1997년에 채택되어 선진국에 법적 구속력이 있는 온실가스 감축 목표를 규정한 의정서는?", a: ["교토의정서", "교토 의정서"], t: "주요 국제 협약", h: "ㄱㅌㅇㅈㅅ" },
+            { q: "지역과 계층 간에 정보 통신 기술에 대한 접근과 활용 차이로 인해 발생하는 불평등 현상은?", a: ["정보격차", "정보 격차"], t: "교통 통신 발달에 따른 변화", h: "ㅈㅂㄱㅊ" },
+            { q: "문화전파의 결과물 중 서로 다른 문화가 만나 완전히 새로운 제3의 문화 양식(예: 재즈)이 되는 현상은?", a: ["문화혼종", "문화 혼종"], t: "교통 통신 발달에 따른 변화", h: "ㅁㅎㅎㅈ" }
+        ],
+        lvl4: [
+            { q: "도시의 주간인구지수 공식은 (주간인구 ÷ [ &nbsp;&nbsp;&nbsp;&nbsp; ]) × 100 이다. 빈칸에 들어갈 인구 유형은?", a: ["상주인구"], t: "도시 내부 구조", h: "ㅅㅈㅇㄱ" },
+            { q: "전형적인 대도시 도심 지역의 주간인구지수는 보통 100보다 큰가, 작은가?", a: ["크다", "큰가"], t: "도시 내부 구조", h: "주간에 유입되는 인구가 많으므로 100 이상임" },
+            { q: "체로키족 문자는 백인의 인쇄 문자를 보고 아이디어를 얻어 독창적으로 발명되었다. 무슨 전파인가?", a: ["자극전파", "자극 전파"], t: "문화 변동 요인", h: "아이디어를 얻은 전파 양식" },
+            { q: "외국인 근로자, 유학생, 다문화 가족 증가로 인해 혐오증을 뜻하는 ( &nbsp;&nbsp;&nbsp;&nbsp; ) 현상이 나타나기도 한다. 빈칸은?", a: ["제노포비아"], t: "다문화 사회와 다양성", h: "ㅈㄴㅍㅂㅇ" },
+            { q: "인간과 자연의 조화를 추구하며 만물의 본래적 가치를 인정하는 유교의 핵심 가치관 용어는?", a: ["천인합일"], t: "동양의 전통 자연관", h: "ㅊㅇㅎㅇ" },
+            { q: "서구 근대의 이분법적 자연관은 자연을 생명력이 없는 물질로 보는 ( &nbsp;&nbsp;&nbsp;&nbsp; )적 자연관을 확립했다. 빈칸은?", a: ["기계론", "기계론적"], t: "인간과 자연의 관계", h: "ㄱㄱㄹ" },
+            { q: "강화도 성공회 성당은 외관은 전통 한옥 양식이지만 내부 배치는 서양 바실리카 양식이다. 어떤 접변 결과인가?", a:
